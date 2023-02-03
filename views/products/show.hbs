@@ -1,0 +1,30 @@
+{{>nav}}
+
+<main class="m-4 relative h-max">
+
+<h1>Name: {{name}}</h1>
+<h1>Description: {{description}}</h1>
+<h1>Code: {{code}}</h1>
+<h1>Price: {{price}}</h1>
+
+
+<div class="container p-0 mb-3">
+		<img src="{{img}}" alt="">
+	</div>
+
+
+
+	<section class="">
+		<span class="my-3">
+			Price: <strong>${{price}}</strong>
+		</span>
+	</section>
+
+<form method="post" action="/carts/{{cartId}}/products/{{productId}}">
+		<input type="number" min="0" value="1" name="quantity" class="rounded h-10 p-2 w-12 mr-2">
+		<button type="submit" class="bg-green-600 px-3 py-2 rounded my-3 text-white hover:bg-green-500 h-10 ">
+			Add to Cart
+		</button>
+	</form>
+
+</main>
